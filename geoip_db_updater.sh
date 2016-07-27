@@ -117,10 +117,10 @@ function _db_replacement {
 
 function _purge {
     for i in {2..6}; do
-        echo $(${WGET} --header="Host: m-img.cafe24.com" --delete-after http://mimg-00${i}.cafe24.com/___purge/GeoIP/check_update)
-        echo $(${WGET} --header="Host: m-img.cafe24.com" --delete-after http://mimg-00${i}.cafe24.com/___purge/GeoIP/GeoIP.dat)
-        echo $(${WGET} --header="Host: m-img.cafe24.com" --delete-after http://mimg-00${i}.cafe24.com/___purge/GeoIP/GeoLiteCity.dat)
-        echo $(${WGET} --header="Host: m-img.cafe24.com" --delete-after http://mimg-00${i}.cafe24.com/___purge/GeoIP/md5.txt)
+        echo $(${WGET} --header="Host: m-img.test.com" --delete-after http://mimg-00${i}.test.com/___purge/GeoIP/check_update)
+        echo $(${WGET} --header="Host: m-img.test.com" --delete-after http://mimg-00${i}.test.com/___purge/GeoIP/GeoIP.dat)
+        echo $(${WGET} --header="Host: m-img.test.com" --delete-after http://mimg-00${i}.test.com/___purge/GeoIP/GeoLiteCity.dat)
+        echo $(${WGET} --header="Host: m-img.test.com" --delete-after http://mimg-00${i}.test.com/___purge/GeoIP/md5.txt)
     done
 }
 
