@@ -42,7 +42,7 @@ function _logging {
     if [ "${log_var}" = "[BEGIN]" ]; then
         echo "" >> ${LOG_FILE}
         echo "[${date}] : ${log_var}" >> ${LOG_FILE}
-    elif [ "${log_var}" = "[END]" ]; then
+    elif [ "${log_var}" = "[Normal END]" ]; then
         echo "[${date}] : ${log_var}" >> ${LOG_FILE}
         echo "Update" > ${BASE_DIR}/check_update
     else
