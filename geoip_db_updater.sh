@@ -1,9 +1,12 @@
 #!/bin/bash
+# -*-Shell-script-*-
 #
-# @-- file    : geoip_db_updater.sh
-# @-- author  : JangjJae, Lee <cine0831@gmail.com>
-# @-- version : 0.1
-# @-- date    : 20160726
+#/**
+# * Title    : geoip_db_updater.sh
+# * Auther   : by Alex, Lee <cine0831@gmail.com>
+# * Created  : 07-26-2016
+# * Modified :
+#**/
 
 #set -e
 #set -x
@@ -12,20 +15,16 @@ PATH="/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin"
 export PATH
 
 readonly BASE_DIR="/home/apps/GeoIP"
-
 readonly LOG_DIR="${BASE_DIR}/logs"
 readonly LOG_FILE="${LOG_DIR}/geoip_updater-$(date +'%Y%m').log"
-
 readonly DN_URL_GEO_IP="http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry"
 readonly DN_URL_GEO_LIFECITY="http://geolite.maxmind.com/download/geoip/database"
 readonly DN_FILE_GEO_IP="/GeoIP.dat.gz"
 readonly DN_FILE_GEO_LIFECITY="/GeoLiteCity.dat.gz"
-
 readonly WGET="/usr/bin/wget"
 readonly CURL="/usr/bin/curl"
 readonly GZIP="/bin/gzip"
 readonly MD5="/usr/bin/md5sum"
-
 
 if [ ! -d ${BASE_DIR} ]; then
     cd ${BASE_DIR}
