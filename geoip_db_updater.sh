@@ -3,9 +3,10 @@
 #
 #/**
 # * Title    : geoip_db_updater.sh
-# * Auther   : by Alex, Lee <cine0831@gmail.com>
+# * Auther   : by Alex, Lee
 # * Created  : 07-26-2016
 # * Modified :
+# * E-mail   : cine0831@gmail.com
 #**/
 
 #set -e
