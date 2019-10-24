@@ -15,7 +15,7 @@
 PATH="/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin"
 export PATH
 
-readonly BASE_DIR="/home/apps/GeoIP"
+readonly BASE_DIR="/usr/local/GeoIP"
 readonly LOG_DIR="${BASE_DIR}/logs"
 readonly LOG_FILE="${LOG_DIR}/geoip_updater-$(date +'%Y%m').log"
 readonly DN_URL_GEO_IP="http://geolite.maxmind.com/download/geoip/database/GeoLiteCountry"
@@ -117,10 +117,10 @@ function _db_replacement {
 
 function _purge {
     for i in {2..6}; do
-        echo $(${WGET} --header="Host: m-img.test.com" --delete-after http://mimg-00${i}.test.com/___purge/GeoIP/check_update)
-        echo $(${WGET} --header="Host: m-img.test.com" --delete-after http://mimg-00${i}.test.com/___purge/GeoIP/GeoIP.dat)
-        echo $(${WGET} --header="Host: m-img.test.com" --delete-after http://mimg-00${i}.test.com/___purge/GeoIP/GeoLiteCity.dat)
-        echo $(${WGET} --header="Host: m-img.test.com" --delete-after http://mimg-00${i}.test.com/___purge/GeoIP/md5.txt)
+        echo $(${WGET} --header="Host: img.test.com" --delete-after http://img-00${i}.test.com/___nginx-purge/GeoIP/check_update)
+        echo $(${WGET} --header="Host: img.test.com" --delete-after http://img-00${i}.test.com/___nginx-purge/GeoIP/GeoIP.dat)
+        echo $(${WGET} --header="Host: img.test.com" --delete-after http://img-00${i}.test.com/___nginx-purge/GeoIP/GeoLiteCity.dat)
+        echo $(${WGET} --header="Host: img.test.com" --delete-after http://img-00${i}.test.com/___nginx-purge/GeoIP/md5.txt)
     done
 }
 
